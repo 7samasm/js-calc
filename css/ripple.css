@@ -1,0 +1,37 @@
+button {
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.ripple-effect {
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(0);
+  opacity: 1;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.ripple-effect-dark {
+  width: 0;
+  height: 0;
+  background: rgba(0, 0, 0, 0.4);
+  transform: scale(0);
+  opacity: 1;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.ripple-animation {
+  animation: ripple-drop 0.4s cubic-bezier(0, 0, 0.3, 1);
+}
+
+@keyframes ripple-drop {
+  100% {
+      transform: scale(2);
+      opacity: 0;
+  }
+}
